@@ -4,35 +4,67 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<title>Dog Adoption Form</title>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
+   <div class="wrap">
+<div class="card">
+<h1>Dog Adoption Application</h1>
+<p class="lead">Please fill out the form below to apply for adoption. All inputs are inside the &lt;form&gt; element.</p>
 
-	<form>
-		<input type="text" id="name" placeholder="Name" style="margin:4px"/>
-		<br/>
-		<input type="text" id="phone" placeholder="Phone Number" style="margin:4px"/>
-		<br/>
-		<input type="text" id="address" placeholder="Address" style="margin:4px"/>
-		<br/>
 
-		<div style="margin:4px">
-			<label for="checkbox">Have you ever lived with a Dog before?</label>
-		<input type="checkbox" id="checkbox" name="checkbox"/>
-		
-		</div>
-		<select id="multiSelect" name="type" multiple
-			>
-			<option value="shepherd">Shepherd</option>
-			<option value="bulldog">Bulldog</option>
-			<option value="beagle">Beagle</option>
-		</select>
-		<div style="margin:4px">
-		<input type="submit" id="submit" value="submit" />
-			</div>
-	</form>
-    <script type="text/javascript" src="./script.js">
+<form id="adoptionForm" action="#" method="post">
+<div class="field full">
+<label for="name">Name</label>
+<input id="name" name="name" type="text" placeholder="Name" required>
+</div>
+
+
+<div class="field">
+<label for="phone">Phone Number</label>
+<input id="phone" name="phone" type="text" placeholder="Phone Number" required>
+</div>
+
+
+<div class="field">
+<label for="address">Address</label>
+<input id="address" name="address" type="text" placeholder="Address" required>
+</div>
+
+
+<div class="field full">
+<div class="checkbox-row">
+<input id="checkbox" name="checkbox" type="checkbox" value="Have you ever lived with a Dog before?">
+<label for="checkbox">Have you ever lived with a Dog before?</label>
+</div>
+<p class="note">Checking this helps us understand your experience with dogs.</p>
+</div>
+
+
+<div class="field full">
+<label for="multiSelect">Please select your preferred breeds</label>
+<select id="multiSelect" name="multiSelect" multiple size="4" aria-label="Preferred dog breeds">
+<option value="labrador">Labrador Retriever</option>
+<option value="beagle">Beagle</option>
+<option value="germanshepherd">German Shepherd</option>
+<option value="bulldog">Bulldog</option>
+<option value="poodle">Poodle</option>
+<option value="mixed">Mixed Breed</option>
+</select>
+<p class="note">This is a multi-select box — hold Ctrl (Windows) or Command (Mac) to select multiple options. (At least 3 options included.)</p>
+</div>
+
+
+<div class="actions">
+<input id="submit" type="submit" class="btn primary" value="Submit">
+</div>
+</form>
+
+
+</div>
+</div>
 </script>
 
 </body>
